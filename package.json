@@ -1,26 +1,29 @@
 {
-  "name": "mediamanager",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Liam191/MediaManager.git"
-  },
-  "author": "Liam Hilliard",
-  "license": "GPL-3.0",
-  "bugs": {
-    "url": "https://github.com/Liam191/MediaManager/issues"
-  },
-  "homepage": "https://github.com/Liam191/MediaManager#readme",
-  "devDependencies": {
-    "electron": "^5.0.5",
-    "jshint": "^2.10.2"
-  },
-  "dependencies": {
-    "angular": "^1.7.8"
-  }
+    "name": "mediamanager",
+    "version": "1.0.0",
+    "description": "",
+    "main": "src/main.js",
+    "scripts": {
+        "start": "electron src/",
+        "package": "electron-packager ./src --overwrite --prune=true --out=builds --platform=win32 --arch=ia32",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Liam191/MediaManager.git"
+    },
+    "author": "Liam Hilliard",
+    "license": "GPL-3.0",
+    "bugs": {
+        "url": "https://github.com/Liam191/MediaManager/issues"
+    },
+    "homepage": "https://github.com/Liam191/MediaManager#readme",
+    "devDependencies": {
+        "electron": "^5.0.5",
+        "electron-packager": "^14.0.0",
+        "jshint": "^2.10.2"
+    },
+    "dependencies": {
+        "angular": "^1.7.8"
+    }
 }
