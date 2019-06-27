@@ -15,5 +15,12 @@
   "bugs": {
     "url": "https://github.com/Liam191/MediaManager/issues"
   },
-  "homepage": "https://github.com/Liam191/MediaManager#readme"
+  "homepage": "https://github.com/Liam191/MediaManager#readme",
+  "devDependencies": {
+    "electron": "^5.0.5",
+    "jshint": "^2.10.2"
+  },
+  "dependencies": {
+    "angular": "^1.7.8"
+  }
 }

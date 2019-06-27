@@ -1,0 +1,10 @@
+{
+    "node": true,
+    "browser": true,
+    "strict": true,
+    "esversion": 6,
+    "globals": {
+        "myApp": false,
+        "angular": false
+    }
+}
