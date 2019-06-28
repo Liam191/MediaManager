@@ -16,5 +16,5 @@ function createWindow(){
         }
     });
 
-    // window.loadFile();
+    window.loadFile('app/index.html');
 }
