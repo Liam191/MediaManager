@@ -6,7 +6,7 @@
     "scripts": {
         "start": "electron src/",
         "package": "electron-packager ./src --overwrite --prune=true --out=builds --platform=win32 --arch=ia32",
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "./node_modules/mocha/bin/mocha tests/test.js"
     },
     "repository": {
         "type": "git",
@@ -19,9 +19,13 @@
     },
     "homepage": "https://github.com/Liam191/MediaManager#readme",
     "devDependencies": {
+        "chai": "^4.2.0",
+        "chai-as-promised": "^7.1.1",
         "electron": "^5.0.5",
         "electron-packager": "^14.0.0",
-        "jshint": "^2.10.2"
+        "jshint": "^2.10.2",
+        "mocha": "^6.1.4",
+        "spectron": "^7.0.0"
     },
     "dependencies": {
         "angular": "^1.7.8"
