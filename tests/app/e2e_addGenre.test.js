@@ -13,6 +13,10 @@ describe('Creating a Genre', function(){
     });
 
     // Open app
+    it('should open the Genre page on startup', function(){
+        app.client.waitUntilWindowLoaded().getWindowCount()
+            .windowCount.should.eventually.equal(1);
+    });
 
     // Assert app initial GUI
 
