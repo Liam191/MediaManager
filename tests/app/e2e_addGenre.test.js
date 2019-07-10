@@ -1,17 +1,8 @@
 "use strict";
 const app = require('../spectronInitialiser').init();
+const chaiAsPromised = require('chai-as-promised');
 
 describe('Creating a Genre', function(){
-
-    beforeEach(function(){
-        return app.start();
-    });
-
-    afterEach(function(){
-        if (app && app.isRunning()) {
-            return app.stop();
-        }
-    });
 
     // Open app
     it('should open the Genre page on startup', function(){

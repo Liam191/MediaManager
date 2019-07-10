@@ -13,14 +13,7 @@ module.exports = {
 };
 
 function init(){
-    // Set up Chai
-    global.before(function(){
-        chai.should();
-        chai.use(chaiAsPromised);
-    });
-
-    // Create and return a new Electron application.
-    return new Application({
+    const app =  new Application({
         path: electronPath,
         args: [ appPath ],
         env:{
@@ -29,4 +22,22 @@ function init(){
         startTimeout: 20*1000,
         chromeDriverLogPath:'../chromedriver.log'
     });
+
+    // Set up Chai before
+    global.before(function(){
+        chai.should();
+        chai.use(chaiAsPromised);
+        chaiAsPromised.transferPromiseness = app.transferPromiseness;
+        return app.start();
+    });
+    
+    // Set up Chai after
+    global.after(function(){
+        if (app && app.isRunning()) {
+            return app.stop();
+        }
+    });
+    
+    // Create and return a new Electron application.
+    return app;
 }
