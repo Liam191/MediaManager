@@ -2,6 +2,7 @@
     "node": true,
     "browser": true,
     "strict": true,
+    "mocha": true,
     "esversion": 6,
     "globals": {
         "myApp": false,
