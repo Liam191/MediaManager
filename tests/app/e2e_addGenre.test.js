@@ -1,21 +1,21 @@
 "use strict";
 const app = require('../spectronInitialiser').init();
-const chai = require('chai');
-const chaiAsPromised = require('chai-as-promised');
 
 describe('Creating a Genre', function(){
+
     beforeEach(function(){
-        app.start();
+        return app.start();
     });
 
     afterEach(function(){
-        app.stop();
+        if (app && app.isRunning()) {
+            return app.stop();
+        }
     });
 
     // Open app
     it('should open the Genre page on startup', function(){
-        app.client.waitUntilWindowLoaded().getWindowCount()
-            .windowCount.should.eventually.equal(1);
+        return app.client.waitUntilWindowLoaded().getWindowCount().should.eventually.equal(1);
     });
 
     // Assert app initial GUI

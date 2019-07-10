@@ -2,7 +2,7 @@
 const path = require('path');
 const electronPath = path.join(__dirname, '..', 'node_modules', '.bin', 'electron' + (process.platform === 'win32' ? '.cmd' : ''));
 const appPath = path.join(__dirname, '..', 'src', 'main.js');
-const Application = require('electron').Application;
+const Application = require('spectron').Application;
 
 const chai = require('chai');
 const chaiAsPromised = require('chai-as-promised');
@@ -14,7 +14,7 @@ module.exports = {
 
 function init(){
     // Set up Chai
-    global.before(() => {
+    global.before(function(){
         chai.should();
         chai.use(chaiAsPromised);
     });
