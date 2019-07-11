@@ -1,8 +1,9 @@
 "use strict";
 const app = require('../spectronInitialiser').init();
-const chaiAsPromised = require('chai-as-promised');
 
-describe('Creating a Genre', function(){
+describe('E2E - Creating a Genre', function(){
+    // Because this is an End-to-End test, we do NOT need
+    // to restart the app after each it() call.
 
     // Open app
     it('should open the Genre page on startup', function(){
