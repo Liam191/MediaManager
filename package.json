@@ -6,7 +6,7 @@
     "scripts": {
         "start": "electron src/",
         "package": "electron-packager ./src --overwrite --prune=true --out=builds --platform=win32 --arch=ia32",
-        "test": "node ./node_modules/mocha/bin/mocha tests/**/*.test.js --timeout 5000"
+        "test": "node ./node_modules/mocha/bin/mocha \"test/**/*.test.js\""
     },
     "repository": {
         "type": "git",
