@@ -11,6 +11,7 @@ function createWindow(){
     const window = new BrowserWindow({
         width: prefs.window.width,
         height: prefs.window.height,
+        title: 'Media Manager',
         webPreferences:{
             nodeIntegration: true
         }

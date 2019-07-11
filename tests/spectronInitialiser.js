@@ -1,7 +1,7 @@
 "use strict";
 const path = require('path');
 const electronPath = path.join(__dirname, '..', 'node_modules', '.bin', 'electron' + (process.platform === 'win32' ? '.cmd' : ''));
-const appPath = path.join(__dirname, '..', 'src', 'main.js');
+const appPath = path.join(__dirname, '..', 'src');
 const Application = require('spectron').Application;
 
 const chai = require('chai');
