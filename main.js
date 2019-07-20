@@ -6,21 +6,21 @@ const {
 } = require('electron');
 
 app.on('ready', createWindow);
-app.on('browser-window-created',function(event, window){
-    // Disable default menu for all new browser instances.
-    window.setMenu(null);
-});
+app.on('browser-window-created', disableMenu);
 
 function createWindow(){
     const window = new BrowserWindow({
         width: prefs.window.width,
         height: prefs.window.height,
         title: 'Media Manager',
-        frame: false,
         webPreferences:{
             nodeIntegration: true
         }
     });
 
     window.loadFile('app/index.html');
+}
+
+function disableMenu(event, window){
+    window.setMenu(null);
 }
