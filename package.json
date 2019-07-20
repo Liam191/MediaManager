@@ -2,10 +2,10 @@
     "name": "mediamanager",
     "version": "1.0.0",
     "description": "",
-    "main": "src/main.js",
+    "main": "main.js",
     "scripts": {
-        "start": "electron src/",
-        "package": "electron-packager ./src --overwrite --prune=true --out=builds --platform=win32 --arch=ia32",
+        "start": "electron .",
+        "package": "electron-packager . --overwrite --prune=true --out=builds --platform=win32 --arch=ia32",
         "test": "node ./node_modules/mocha/bin/mocha \"test/**/*.test.js\""
     },
     "repository": {
@@ -28,6 +28,7 @@
         "spectron": "^7.0.0"
     },
     "dependencies": {
-        "angular": "^1.7.8"
+        "angular": "^1.7.8",
+        "mongojs": "^2.6.0"
     }
 }
