@@ -1,4 +1,4 @@
-(function(){
+(function(document){
     "use strict";
     const electron = require('electron');
     const appWindow = electron.remote.getCurrentWindow();
@@ -19,4 +19,4 @@
             default: break;
         }
     });
-})();
+})(document);
