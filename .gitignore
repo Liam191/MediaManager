@@ -63,3 +63,4 @@ typings/
 # Media Manager files/folders
 /builds
 /brief
+.vscode/
