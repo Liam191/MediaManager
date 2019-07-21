@@ -4,4 +4,5 @@
     const appWindow = electron.remote.getCurrentWindow();
 
     console.log(CategoryRepository);
+
 })(CategoryRepository);
