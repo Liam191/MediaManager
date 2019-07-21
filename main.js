@@ -18,7 +18,7 @@ function createWindow(){
         }
     });
 
-    window.loadFile('app/index.html');
+    window.loadFile('app/index/index.html');
 }
 
 function disableMenu(event, window){
