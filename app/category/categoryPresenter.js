@@ -3,7 +3,7 @@
     const container = document.getElementById('category-container');
 
     // Initialise categories
-    let categories = CategoryModel.getCategories();
+    // let categories = CategoryModel.getCategories();
 
     // Push changes to Categories to model
 
