@@ -1,8 +1,16 @@
-(function(CategoryRepository){
+(function(document, CategoryModel){
     "use strict";
-    const electron = require('electron');
-    const appWindow = electron.remote.getCurrentWindow();
+    const container = document.getElementById('category-container');
 
-    console.log(CategoryRepository);
+    // Initialise categories
+    let categories = CategoryModel.getCategories();
 
-})(CategoryRepository);
+    // Push changes to Categories to model
+
+    // Add Categories to model
+
+    // Listen for change to Categories from model
+
+    // Navigate to Category view
+
+})(document, CategoryModel);
