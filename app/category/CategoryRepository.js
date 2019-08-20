@@ -4,8 +4,17 @@ const CategoryRepository = function(){
     // const idb = window.indexedDB;
     // init();
 
-    return {};
+    return {
+        getCategories
+    };
 
+    function getCategories(){
+        return [
+            {
+                
+            },
+        ];
+    }
     // function init(){
     //     let request = idb.open('MediaDatabase', 1);
 
