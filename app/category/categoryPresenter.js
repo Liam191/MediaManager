@@ -3,11 +3,16 @@
     const container = document.getElementById('category-container');
 
     // Initialise categories
-    let categories = CategoryModel.getCategories();
+    let categories = CategoryModel.getCategoryList();
 
-    categories.on('change', function(event){
+    categories.addListener('change', function(event){
         console.log('change', event);
     });
+
+    document.getElementById('btn-add-category').onclick = function(event){
+        console.log(event);
+        categories.push({'test': 'New category!!'});
+    };
 
     // Push changes to Categories to model
 
