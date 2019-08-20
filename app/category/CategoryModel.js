@@ -26,11 +26,12 @@ const CategoryModel = function(require, CategoryRepository){
 
 
         return {
-            get: get,
-            set: set,
-            push: push,
-            addListener: addListener,
-            removeListener: removeListener,
+            get,
+            set,
+            push,
+            remove,
+            addListener,
+            removeListener,
         };
 
 
@@ -44,15 +45,24 @@ const CategoryModel = function(require, CategoryRepository){
         }
 
         function push(data){
+            // TODO: Track by category GUID
             categories.push(data);
             emitEvent(events.CHANGE, { index: categories.length - 1 });
         }
 
+        function remove(data){
+            // TODO: Track by category GUID
+            categories.filter((element) => { return element === data; });
+            emitEvent(events.CHANGE, { index: -1 });
+        }
+
         function initEventHandlers(){
             const handlerObj = {};
+            let currentEvent;
             let keys = Object.keys(events);
             for(let i = 0; i < keys.length; i++){
-                handlerObj[keys[i]] = [];
+                currentEvent = events[keys[i]];
+                handlerObj[currentEvent] = [];
             }
             return handlerObj;
         }
